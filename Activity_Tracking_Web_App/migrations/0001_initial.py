@@ -13,4 +13,8 @@ class Migration(migrations.Migration):
     dependencies = [
     ]
 
-    op
+    operations = [
+        migrations.CreateModel(
+            name='Employee',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary
