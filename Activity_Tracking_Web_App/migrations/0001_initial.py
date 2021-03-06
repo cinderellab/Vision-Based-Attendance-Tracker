@@ -45,4 +45,6 @@ class Migration(migrations.Migration):
                 ('depart_time', models.CharField(blank=True, max_length=10000, null=True)),
                 ('on_working', models.DecimalField(blank=True, decimal_places=2, max_digits=5, null=True)),
                 ('off_working', models.DecimalField(blank=True, decimal_places=2, max_digits=5, null=True)),
-                ('fun_area_time', models.DecimalFiel
+                ('fun_area_time', models.DecimalField(blank=True, decimal_places=2, max_digits=5, null=True)),
+                ('active', models.BooleanField(default=True)),
+                ('exceptio
