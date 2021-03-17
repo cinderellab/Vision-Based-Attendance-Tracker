@@ -10,4 +10,10 @@ class Employee(models.Model):
     name = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.na
+        return self.name
+
+
+class Activity(models.Model):
+    Employee = models.ForeignKey(Employee, on_delete=models.DO_NOTHING)
+    date = models.DateField(default=datetime.now)
+    arrival_t
