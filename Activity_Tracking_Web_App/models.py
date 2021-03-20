@@ -21,4 +21,7 @@ class Activity(models.Model):
     on_working = models.DecimalField(
         max_digits=5, decimal_places=2, blank=True, null=True)
     off_working = models.DecimalField(
-        max_digits=5, decimal_plac
+        max_digits=5, decimal_places=2, blank=True, null=True)
+    fun_area_time = models.DecimalField(
+        max_digits=5, decimal_places=2, blank=True, null=True)
+    active = model
