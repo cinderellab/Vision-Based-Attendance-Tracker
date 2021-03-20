@@ -18,4 +18,7 @@ class Activity(models.Model):
     date = models.DateField(default=datetime.now)
     arrival_time = models.CharField(max_length=10000, blank=True, null=True)
     depart_time = models.CharField(max_length=10000, blank=True, null=True)
-    on_working = models.D
+    on_working = models.DecimalField(
+        max_digits=5, decimal_places=2, blank=True, null=True)
+    off_working = models.DecimalField(
+        max_digits=5, decimal_plac
