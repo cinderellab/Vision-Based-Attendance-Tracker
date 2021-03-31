@@ -40,4 +40,10 @@ def content_file_name(instance, filename):
 
 
 class Picture(models.Model):
-    Employee = models.ForeignKey(Employee, on_del
+    Employee = models.ForeignKey(Employee, on_delete=models.DO_NOTHING)
+    pic = models.ImageField(upload_to=content_file_name, blank=True, null=True)
+
+    def employee(self):
+        return self.Employee.name
+
+d
