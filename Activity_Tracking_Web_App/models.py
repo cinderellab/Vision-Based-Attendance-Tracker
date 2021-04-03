@@ -46,4 +46,6 @@ class Picture(models.Model):
     def employee(self):
         return self.Employee.name
 
-d
+def test_content_file_name(instance, filename):
+    filename, ext = filename.split('.')
+    file_path = 'testing/' + '{filename}.{ext}'.format( fi
