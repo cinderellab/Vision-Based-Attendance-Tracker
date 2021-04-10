@@ -54,4 +54,4 @@ def test_content_file_name(instance, filename):
  
 
 class Test(models.Model):
-    model_pic = models.ImageField(upload_to =test_content_file_name, b
+    model_pic = models.ImageField(upload_to =test_content_file_name, blank=True, null= True)
