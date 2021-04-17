@@ -19,4 +19,12 @@ df['unified_id'] = df['unified_id'].replace(4, 3)
 
 ####temp = DataFrame(entry)
 ####df = df.append(temp)
-####df.to_csv('final.
+####df.to_csv('final.csv', index = False)
+
+
+
+entries = {'employee_name': [],
+      'arrival_time': [],
+      'depart_time':[],
+      'on_working':[],
+      'o
