@@ -36,4 +36,8 @@ entries_df = pd.DataFrame(entries)
 #df.to_csv('final.csv', index = False)
 
 location = 0
-for name in df.employ
+for name in df.employee_name.unique():
+
+	df_emp = df[df['employee_name'] == name]
+	df_emp = clean_class(df_emp)
+	df_emp = df_emp.groupby((df_emp['unified_id'] != df_emp['unif
