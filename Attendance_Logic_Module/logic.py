@@ -27,4 +27,13 @@ entries = {'employee_name': [],
       'arrival_time': [],
       'depart_time':[],
       'on_working':[],
-      'o
+      'off_working':[],
+      'fun_area_time':[]
+      }
+	  
+entries_df = pd.DataFrame(entries)
+
+#df.to_csv('final.csv', index = False)
+
+location = 0
+for name in df.employ
