@@ -40,4 +40,12 @@ for name in df.employee_name.unique():
 
 	df_emp = df[df['employee_name'] == name]
 	df_emp = clean_class(df_emp)
-	df_emp = df_emp.groupby((df_emp['unified_id'] != df_emp['unif
+	df_emp = df_emp.groupby((df_emp['unified_id'] != df_emp['unified_id'].shift()).cumsum().values).first()
+
+	first_seen = -1
+	last_seen = -1
+
+	employee_data = {'entrance':0.0,
+          'exit': 0.0,
+          'on_working':0.0,
+          'off_w
