@@ -48,4 +48,10 @@ for name in df.employee_name.unique():
 	employee_data = {'entrance':0.0,
           'exit': 0.0,
           'on_working':0.0,
-          'off_w
+          'off_working':0.0
+          }
+
+	for index, row in df_emp.iterrows():
+   		
+   		if(row['unified_id'] == 1):
+   			if(first_seen == -1):            
