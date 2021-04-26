@@ -55,3 +55,8 @@ for name in df.employee_name.unique():
    		
    		if(row['unified_id'] == 1):
    			if(first_seen == -1):            
+   				first_seen = row['timestamp']
+
+   			if(employee_data['entrance'] == 0):
+   				employee_data['entrance'] = row['timestamp']
+   				if(employee_dat
