@@ -59,4 +59,6 @@ for name in df.employee_name.unique():
 
    			if(employee_data['entrance'] == 0):
    				employee_data['entrance'] = row['timestamp']
-   				if(employee_dat
+   				if(employee_data['exit'] != 0):
+   					employee_data['off_working'] = employee_data['off_working'] + (employee_data['entrance'] - employee_data['exit'])
+   					employee_data['
