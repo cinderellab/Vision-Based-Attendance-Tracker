@@ -61,4 +61,12 @@ for name in df.employee_name.unique():
    				employee_data['entrance'] = row['timestamp']
    				if(employee_data['exit'] != 0):
    					employee_data['off_working'] = employee_data['off_working'] + (employee_data['entrance'] - employee_data['exit'])
-   					employee_data['
+   					employee_data['exit'] = 0
+   			else:
+   				continue
+
+
+
+   		elif(row['unified_id'] == 3):
+   			if(employee_data['entrance'] != 0):
+   				employee_data['exit'] = ro
