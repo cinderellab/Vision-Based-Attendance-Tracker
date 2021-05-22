@@ -71,4 +71,7 @@ for name in df.employee_name.unique():
    			if(employee_data['entrance'] != 0):
    				employee_data['exit'] = row['timestamp']
    				employee_data['on_working'] = employee_data['on_working'] + (employee_data['exit'] - employee_data['entrance'])
-   				last_seen = empl
+   				last_seen = employee_data['exit']  
+   				employee_data['entrance'] = 0
+#########################################
+	entry = [name, first_seen, last_seen, employee_data['on_w
