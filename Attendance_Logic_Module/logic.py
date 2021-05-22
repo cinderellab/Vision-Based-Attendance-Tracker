@@ -78,4 +78,5 @@ for name in df.employee_name.unique():
 	entries_df.loc[location] = entry
 	location = location + 1
 
-entries_df.to_csv('result.csv', index = Fa
+entries_df.to_csv('result.csv', index = False)
+##########################################
