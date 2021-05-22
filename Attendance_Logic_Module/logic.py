@@ -74,4 +74,8 @@ for name in df.employee_name.unique():
    				last_seen = employee_data['exit']  
    				employee_data['entrance'] = 0
 #########################################
-	entry = [name, first_seen, last_seen, employee_data['on_w
+	entry = [name, first_seen, last_seen, employee_data['on_working'], employee_data['off_working'], 0]
+	entries_df.loc[location] = entry
+	location = location + 1
+
+entries_df.to_csv('result.csv', index = Fa
