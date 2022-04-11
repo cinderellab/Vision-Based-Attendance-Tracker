@@ -17,4 +17,8 @@ def add_person():
   trainX_new_person, trainy_new_person ,_ = load_dataset(PATH_TO_ADDED_PERSON_FOLDER + '/')
   #print("SHAPE OF ADDED TRAINING EXAMPLES:",trainX.shape,"SHAPE OF LABELS:" ,trainy_new_person.shape)
   
-  # CONVERT EACH FACE
+  # CONVERT EACH FACE IN THE TRAIN SET TO AN EMBEDDING
+  newTrainX_Images = list()
+  for face_pixels in trainX_new_person:
+    embedding = get_embedding(model, face_pixels)
+    new
