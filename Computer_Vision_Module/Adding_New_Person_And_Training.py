@@ -21,4 +21,6 @@ def add_person():
   newTrainX_Images = list()
   for face_pixels in trainX_new_person:
     embedding = get_embedding(model, face_pixels)
-    new
+    newTrainX_Images.append(embedding)
+  newTrainX_Images = asarray(newTrainX_Images)
+  print("SHAPE OF ADDED EMBEDDINGS:",newTrainX_Images.shape,"SHAPE OF 
