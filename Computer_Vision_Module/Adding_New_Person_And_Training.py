@@ -29,4 +29,6 @@ def add_person():
   data = load( EMBEDDINGS_PATH + '/Embeddings-dataset.npz' )
   old_embeddings , old_labels = data['arr_0'] , data['arr_1']
   print("OLD EMBEDDINGS:", old_embeddings.shape ,"OLD LABELS:" ,old_labels.shape)
-  new_embeddings , new_labels = newTrainX_Images,tr
+  new_embeddings , new_labels = newTrainX_Images,trainy_new_person
+  print("NEW EMBEDDINGS:", new_embeddings.shape ,"NEW LABELS:" ,new_labels.shape)
+  trainX  = np.concatenate((old_embeddings, ne
