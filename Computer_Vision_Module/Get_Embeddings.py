@@ -9,4 +9,6 @@ def get_embedding(model, face_pixels):
   '''
   GET EMBEDDINGS FOR ONLY ONE FACE
   '''
-  print("Shape of image" ,face_pixels.sha
+  print("Shape of image" ,face_pixels.shape )
+  face_pixels = face_pixels.astype('float32') # scale pixel values
+  mean, std = face_pixels.mean(), face_pixels.std() # stand
