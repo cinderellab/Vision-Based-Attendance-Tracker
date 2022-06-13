@@ -18,4 +18,6 @@ def get_embedding(model, face_pixels):
   
   with graph.as_default():
     yhat = model.predict(samples) # make prediction to get embedding
-    print(
+    print("Shape of yhat" ,yhat.shape )
+    return yhat[0]
+  
