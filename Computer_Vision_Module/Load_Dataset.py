@@ -27,4 +27,10 @@ def load_dataset(directory):
   # data = load( EMBEDDINGS_PATH + '/Embeddings-dataset.npz')
   # trainy = data['arr_1']
   
-  if os.path.isfile( EMPLOYEES_NAMES +'/Employees-dataset.n
+  if os.path.isfile( EMPLOYEES_NAMES +'/Employees-dataset.npz') == True:
+    data = load( EMPLOYEES_NAMES + '/Employees-dataset.npz')
+    Employees = data['arr_0'] # List
+    # Already exist
+    flag = False
+  else:
+  
