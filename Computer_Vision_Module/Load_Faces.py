@@ -12,4 +12,10 @@ from .Extract_Faces import extract_face
 def load_faces(directory):
   '''
   THIS FUNCTION TAKES DIRECTORY OF (ONE) PERSON IMAGES AS INPUT
-  OUTPUTS A FAC
+  OUTPUTS A FACE NUMPY ARRAY
+  '''
+  faces = list()
+  # enumerate files
+  for filename in listdir(directory):
+    path = directory + filename
+    face = extract_face(path) # get
