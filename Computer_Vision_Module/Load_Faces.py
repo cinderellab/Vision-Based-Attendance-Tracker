@@ -18,4 +18,8 @@ def load_faces(directory):
   # enumerate files
   for filename in listdir(directory):
     path = directory + filename
-    face = extract_face(path) # get
+    face = extract_face(path) # get face
+    if(len(face) == 0):
+      continue
+    faces.append(face) # store
+  return faces
