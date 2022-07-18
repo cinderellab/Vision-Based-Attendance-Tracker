@@ -9,4 +9,13 @@ from os.path import isdir
 import numpy as np
 from numpy import asarray
 from numpy import savez_compressed
-from numpy imp
+from numpy import load
+import keras
+
+
+
+
+def trainModel():
+  # load train dataset
+  print("STARTING THE TRAINING PROCESS...")
+  print("DATA PATH IS:",TRAININ
