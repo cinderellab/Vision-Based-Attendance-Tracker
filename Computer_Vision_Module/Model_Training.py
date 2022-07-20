@@ -30,4 +30,7 @@ def trainModel():
   # CONVERT EACH FACE IN THE TRAIN SET TO AN EMBEDDING
   newTrainX = list()
   for face_pixels in trainX:
-    embedding = get_embedding(m
+    embedding = get_embedding(model, face_pixels)
+    newTrainX.append(embedding)
+  newTrainX = asarray(newTrainX)
+  print("SHAPE OF TRAINING EMBEDDINGS:",newTrainX.shape,"SHAPE OF L
