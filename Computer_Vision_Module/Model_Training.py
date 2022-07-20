@@ -25,4 +25,9 @@ def trainModel():
     print("TERMINATING...")
     sys.exit(0)
   trainX, trainy , flag = load_dataset(TRAINING_IMAGES_PATH + '/')
-  print("SHAPE OF TRAINING EXAMPLES:",trainX.shape,"SHAPE OF LABELS:" ,trainy.s
+  print("SHAPE OF TRAINING EXAMPLES:",trainX.shape,"SHAPE OF LABELS:" ,trainy.shape)
+  
+  # CONVERT EACH FACE IN THE TRAIN SET TO AN EMBEDDING
+  newTrainX = list()
+  for face_pixels in trainX:
+    embedding = get_embedding(m
