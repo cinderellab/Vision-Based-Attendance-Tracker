@@ -33,4 +33,8 @@ def trainModel():
     embedding = get_embedding(model, face_pixels)
     newTrainX.append(embedding)
   newTrainX = asarray(newTrainX)
-  print("SHAPE OF TRAINING EMBEDDINGS:",newTrainX.shape,"SHAPE OF L
+  print("SHAPE OF TRAINING EMBEDDINGS:",newTrainX.shape,"SHAPE OF LABELS:" ,trainy.shape)
+  # If true save if false append?
+  print("SAVING THE EMBEDDINGS NUMBY ARRAY...")
+  if flag == True:
+    # Data base is empty, s
