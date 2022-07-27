@@ -37,4 +37,5 @@ def trainModel():
   # If true save if false append?
   print("SAVING THE EMBEDDINGS NUMBY ARRAY...")
   if flag == True:
-    # Data base is empty, s
+    # Data base is empty, save new numpy array and keep newTrainX
+    savez_compressed( EMBEDDINGS_PATH + '/Embeddings-dataset.npz', newTrainX,trainy)  # save arrays
