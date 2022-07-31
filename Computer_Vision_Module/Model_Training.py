@@ -47,4 +47,6 @@ def trainModel():
     print("OLD EMBEDDINGS:", old_embeddings.shape ,"OLD LABELS:" ,old_labels.shape)
     new_embeddings , new_labels = newTrainX , trainy
     print("NEW EMBEDDINGS:", new_embeddings.shape ,"NEW LABELS:" ,new_labels.shape)
-    trainX  = np.con
+    trainX  = np.concatenate((old_embeddings, new_embeddings), axis=0)
+    trainy  = np.concatenate((old_labels, new_labels), axis=0)
+    print("FINAL EMBED
