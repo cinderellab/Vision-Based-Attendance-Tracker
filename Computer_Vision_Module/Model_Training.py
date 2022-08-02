@@ -52,3 +52,4 @@ def trainModel():
     print("FINAL EMBEDDINGS:", trainX.shape ,"FINAL LABELS:" ,trainy.shape)
     savez_compressed( EMBEDDINGS_PATH + '/Embeddings-dataset.npz' , trainX,trainy) 
     svm_train(trainX, trainy)
+  
