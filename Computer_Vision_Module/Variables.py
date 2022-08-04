@@ -8,4 +8,11 @@ detector = MTCNN() # Creating instance from the class MTCNN
 EMBEDDINGS_PATH = os.getcwd() 
 
 # EMPLOYEES PATH
-EMPLOYEES_NAMES = os.g
+EMPLOYEES_NAMES = os.getcwd()
+
+# SVM Model Path
+SVM_MODEL_PATH = os.getcwd()
+
+
+# Create Folders/Classes under photos dir in your Django Project
+TRAINING_IMAGES_PATH =
