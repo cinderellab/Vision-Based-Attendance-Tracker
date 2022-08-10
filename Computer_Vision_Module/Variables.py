@@ -28,4 +28,10 @@ if os.path.isfile(FACENET_MODEL) == True:
   print("facenet_keras.h5 already exist, no need to re-download it \n")
 else:
   print("Working directory where detector model will be saved in:",FACENET_MODEL)
-  bashCommand = "wget --no-check-certificate 'https://docs.google.com/uc?expor
+  bashCommand = "wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1PZ_6Zsy1Vb0s0JmjEmVd8FS99zoMCiN1' -O " + FACENET_MODEL
+  os.system(bashCommand)
+
+model = load_model(FACENET_MODEL)
+
+
+# Variables Specefic for
