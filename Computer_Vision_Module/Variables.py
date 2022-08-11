@@ -34,4 +34,9 @@ else:
 model = load_model(FACENET_MODEL)
 
 
-# Variables Specefic for
+# Variables Specefic for Adding New Persons
+PATH_TO_ADDED_PERSON_FOLDER = '/content/Added'
+
+
+# Variables Specific for Video Function
+PATH_TO_VIDEO_DIRECTORY = '/conte
