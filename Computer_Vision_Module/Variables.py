@@ -41,4 +41,6 @@ PATH_TO_ADDED_PERSON_FOLDER = '/content/Added'
 # Variables Specific for Video Function
 PATH_TO_VIDEO_DIRECTORY = '/content/Test_videos' # Without Slash
 PATH_TO_OUTPUT_VIDEOS_DIRECTORY = '/content/Output' # Without slash
-PATH_TO_OUTPUT_LOGFILE_DIRECTORY = '/con
+PATH_TO_OUTPUT_LOGFILE_DIRECTORY = '/content/LogFiles' # Without slash
+DETECTOR_CONFIDENCE = 0.99
+SVM_CONFIDENCE = 0.999
