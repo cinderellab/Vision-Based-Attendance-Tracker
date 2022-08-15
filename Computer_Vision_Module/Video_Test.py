@@ -71,3 +71,47 @@ def video_test(video_path, svm_model):
 
       if(pred_proba[0][prediction[0]] > SVM_CONFIDENCE):
         predict_name = out_encoder.inverse_transform(prediction)
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.putText(pixels, predict_name[0], (x1, y1), font, 1, (255, 255, 0), 2) 
+
+        ######################## WRITING TO CSV FILES ################################
+        entry = {'camera_id': [str(CAMERA_ID)],
+          'timestamp': [current_frame_time],
+          'employee_name':[predict_name[0]],
+          'confidence':[pred_proba[0][prediction[0]]],
+          'x':[int(x1)],
+          'y':[int(y1)],
+          'width':[int(width)],
+          'height':[int(height)]
+          }
+        temp = DataFrame(entry)
+        df = df.append(temp)
+
+    out.write(pixels)
+    if cv2.waitKey(10) == 27:                     # exit if Escape is hit
+        break
+
+  #update_progress(1)
+  bar.finish()
+  out.release()
+  df.to_csv( PATH_TO_OUTPUT_LOGFILE_DIRECTORY + '/CAMERA' +str(CAMERA_ID)+ '_logfile.csv' , index = False)
+  return
+
+
+
+
+def video():
+  '''
+  This image takes a directory that has several videos, each video is names as: CAMERA0.mp4 / CAMERA1.mp4 and so on
+  '''
+  svm_model = pickle.load(open( SVM_MODEL_PATH +  '/svm_model.sav' , 'rb'))
+  directory = PATH_TO_VIDEO_DIRECTORY
+  for subdir in listdir(directory): # LOOP OVER SUB-FOLDERS, on per class
+    path = directory + '/' + subdir  # PATH = SUBFOLDER
+    print("CURRENTLY PROCESSING VIDEO:", path)
+    video_test(path , svm_model)
+  print("FINISHED PROCESSING VIDEO FILES!")
+  return
+
+
+  
